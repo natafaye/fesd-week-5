@@ -1,25 +1,48 @@
 
-var numberOfCats = prompt("How many cats do you have?")
-var areYouACatDoctor = prompt("Are you a cat doctor?") // "yes" or "no"
 
-//  && areYouACatDoctor === "no"
+// if (true) {
+//     while (false) {
+//     }
+// }
 
-if (numberOfCats > 10) {
-    alert("That's too many")
+// if(something) {
+//     if(fdsfsd) {
+
+//     }
+// }
+
+// let isSunny = GETTING IT FROM THE USER
+// let isRainy = GETTING IT FROM THE USER
+
+// if(isSunny && isRainy || !isSunny) {
+//     alert("something")
+// }
+
+
+// let sunny = true;
+// let rainy = true;
+// if(sunny) {
+//     alert("Wear sunscreen!");
+// }
+// alert("You’re ready!");
+
+
+let numberOfCats = prompt("How many cats do you have?")
+
+numberOfCats = parseInt(numberOfCats)
+
+if(numberOfCats > 7) {
+    alert("You might have a cat addiction")
 }
-else if (numberOfCats >= 5) {
-    alert("You have kind of a lot of cats")
+else if(numberOfCats === 3) {
+    alert("You need more cats")
 }
-else if (numberOfCats < 2) {
-    alert("That's too few")
-}
-else {
+else { // 1-7
     alert("You have a great number of cats")
 }
 
-for(let i = 0; i < numberOfCats; i++) {
-    // petting every third cat
-    if(i % 3 === 0) {
-        alert("petting a cat " + i)
-    }
+
+
+for(let i = 0; i < 3; i++) {
+    alert("hello!")
 }
