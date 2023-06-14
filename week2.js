@@ -1,107 +1,107 @@
 
-// let paysWell = true
-// let isLegal = false
+let paysWell = true
+let isLegal = false
 
-// let takeJob = paysWell && isLegal
+let takeJob = paysWell && isLegal
 
-// alert(takeJob)
-
-
-
-// dogName = "Milo"
-// likesFetch = true
-// sheds = true
-// pottyTrained = true
-// likesSnuggles = true
-
-
-// // He wants it to be potty trained
-// // He wants it to like to snuggle or like to play fetch (or both)
-// // He doesn’t want it to shed
-
-// alert("Should he get Milo? " + (pottyTrained && !sheds && (likesSnuggles || likesFetch)))
-
-// dogName = "Penny"
-// likesFetch = true
-// sheds = false
-// pottyTrained = false
-// likesSnuggles = true
-
-// alert("Should he get Penny? " + (pottyTrained && !sheds && (likesSnuggles || likesFetch)))
-
-
-// let age = 40
-// let country = "USA"
-// let money = 1
-
-// if ((age >= 21 || country === "Germany") && money >= 4.99) {
-//     alert("You can have it!")
-// }
+alert(takeJob)
 
 
 
-
-// let sunny = true
-// let rainy = true
-
-// if (sunny && rainy) {
-//     alert("Weird day!")
-// }
-// else if (sunny) {
-//     alert("Wear sunscreen!")
-// }
-// else if (rainy) {
-//     alert("Bring an umbrella!")
-// }
-// else { // implied else if(!rainy && !sunny)
-//     alert("What do we know") // we know that sunny and rainy are both false if we get here
-// }
-
-// alert("You’re ready!")
+dogName = "Milo"
+likesFetch = true
+sheds = true
+pottyTrained = true
+likesSnuggles = true
 
 
-// const age = prompt("What's your age?")
-// let grade = 0
+// He wants it to be potty trained
+// He wants it to like to snuggle or like to play fetch (or both)
+// He doesn’t want it to shed
 
-// switch (age) {
-//     case 6:
-//         grade = 1
-//         break
-//     case 7:
-//         grade = 2
-//         break
-//     case 6:
-//         grade = 1
-//         break
-//     case 8:
-//         grade = 1
-//         break
-//     case 9:
-//         grade = 1
-//         break
-//     case 6:
-//         grade = 1
-//         break
-// }
+alert("Should he get Milo? " + (pottyTrained && !sheds && (likesSnuggles || likesFetch)))
+
+dogName = "Penny"
+likesFetch = true
+sheds = false
+pottyTrained = false
+likesSnuggles = true
+
+alert("Should he get Penny? " + (pottyTrained && !sheds && (likesSnuggles || likesFetch)))
 
 
-// if(false) {
-//     alert("never run")
-// }
+let age = 40
+let country = "USA"
+let money = 1
 
-// while(false) {
-//     alert("never run")
-// }
+if ((age >= 21 || country === "Germany") && money >= 4.99) {
+    alert("You can have it!")
+}
 
 
 
-// let guess = ""
 
-// while(guess.toLowerCase() !== "pineapple") { // guess !== "pineapple" && guess !== "Pineapple"
-//     guess = prompt("Guess!")
-// }
+let sunny = true
+let rainy = true
 
-// alert("You guessed right!")
+if (sunny && rainy) {
+    alert("Weird day!")
+}
+else if (sunny) {
+    alert("Wear sunscreen!")
+}
+else if (rainy) {
+    alert("Bring an umbrella!")
+}
+else { // implied else if(!rainy && !sunny)
+    alert("What do we know") // we know that sunny and rainy are both false if we get here
+}
+
+alert("You’re ready!")
+
+
+age = prompt("What's your age?")
+let grade = 0
+
+switch (age) {
+    case 6:
+        grade = 1
+        break
+    case 7:
+        grade = 2
+        break
+    case 6:
+        grade = 1
+        break
+    case 8:
+        grade = 1
+        break
+    case 9:
+        grade = 1
+        break
+    case 6:
+        grade = 1
+        break
+}
+
+
+if(false) {
+    alert("never runs")
+}
+
+while(false) {
+    alert("never runs")
+}
+
+
+
+let guess = ""
+
+while(guess.toLowerCase() !== "pineapple") { // guess !== "pineapple" && guess !== "Pineapple"
+    guess = prompt("Guess!")
+}
+
+alert("You guessed right!")
 
 
 
@@ -109,29 +109,29 @@
 // i = 6
 
 
-// let total = 0
+let total = 0
 
-// for(let i = 1; i <= 5; i++) {
-//    total += i; 
-// }
+for(let i = 1; i <= 5; i++) {
+   total += i; 
+}
 
-// alert("The total is " + total)
-
-
-// guess = "pineapple"
-
-// let guess = ""
-
-// do {
-//     guess = prompt("Guess!")
-// } while(guess !== "pineapple")
-
-// alert("You guessed right!")
+alert("The total is " + total)
 
 
-// pointsReset = true
-// points = 125
-// i = 31
+
+
+guess = ""
+
+do {
+    guess = prompt("Guess!")
+} while(guess !== "pineapple")
+
+alert("You guessed right!")
+
+
+pointsReset = true
+points = 125
+i = 31
 
 var points = 0
 var pointsReset = false
