@@ -1,12 +1,5 @@
-let dogName
-let likesFetch
-let sheds
-let pottyTrained
-let likesSnuggles
-
-// He wants it to be potty trained
-// He wants it to like to snuggle or like to play fetch (or both)
-// He doesn’t want it to shed
+// this is a thing you can do
+let dogName, likesFetch, sheds, pottyTrained, likesSnuggles
 
 
 dogName = "Milo"
@@ -15,8 +8,19 @@ sheds = true
 pottyTrained = true
 likesSnuggles = true
 
-console.log(dogName)
-console.log(!sheds && pottyTrained && (likesSnuggles || likesFetch) )
+/*
+ * He wants it to be potty trained
+ * He doesn’t want it to shed
+ * He wants it to like to snuggle or like to play fetch (or both)
+ */
+
+// Use && || ! () and variables above
+
+
+const shouldGetMilo = pottyTrained && !sheds && (likesFetch || likesSnuggles)
+
+console.log("Should he get Milo?", shouldGetMilo)
+
 
 dogName = "Penny"
 likesFetch = false
@@ -24,68 +28,75 @@ sheds = false
 pottyTrained = true
 likesSnuggles = true
 
-console.log(dogName)
-console.log(!sheds && pottyTrained && (likesSnuggles || likesFetch) )
+const shouldGetPenny = pottyTrained || !sheds || (likesFetch || likesSnuggles)
+// sort by best match
+// use a loop to do this
+
+console.log("Should he get Penny?", shouldGetPenny)
 
 
-// = compares
-3 === 6 // false
-4 >= 2 // true
-
-let age
-
-// = assigns
-age = 3
-//+= is shorthand for =    +
-age += 2
-age = age + 2
 
 
-age = 40
-let country = "USA"
-let money = 1
+// what is inside the loop and what is not inside the loop
+// how the computer exactly runs this
 
-let canDrink = (age >= 21 || country === "Germany") && money >= 4.99
+// i: 3
 
-if((age >= 21 || country === "Germany") && money >= 4.99) {
-    alert("Here's a drink")
-} else {
-    alert("Go home")
+// let i = 0
+// while(i < 3) {
+//     alert("Here's a cat!")
+//     i++ // i = i + 1
+// }
+// console.log(i)
+// alert("You have enough!")
+
+// look at this with for loop
+
+
+// while(!gameOver) {
+//     // do another turn
+// }
+// // oops game over
+
+// while(userPick !== "EXIT") {
+//     // handle the user's pick
+// }
+// // say goodbye
+
+// while(currentDiscountCode doesnt work) {
+//     // check the next one
+// }
+
+
+// for(let i = 0; i < numFriendsAtHouse; i++) {
+//     // make a sandwich
+// }
+
+
+// total: 0
+// i: 1
+
+let total = 0
+// logging total here would give: 0
+for(let i = 1; i <= 5; i++) {  
+   console.log("total", total) // 0, 1, 3, 6, 10
+   console.log("i", i)
+   total += i
+    // logging total here would give: 1, 3, 6, 10, 15
+}
+// logging total here would give: 15
+alert("The total is " + total)
+
+
+let userResponse = ""
+
+// Keep prompting until they give a name
+while(userResponse !== "cat" && userResponse !== "dog") {
+    userResponse = prompt("What's the best animal?")
 }
 
-let sunny = true
-let rainy = true
-
-if(sunny) {
-    alert("Wear sunscreen!")
-}
-else if(rainy) {
-    alert("Bring an umbrella!")
-}
-else {
-    alert("Wear a coat!")
-}
-
-alert("You're ready!")
+console.log(userResponse)
 
 
 
 
-
-let numCats = prompt("How many cats do you have?")
-
-// shame them for having a bad number of cats
-if(numCats < 2) {
-    alert("You don't have enough cats")
-} else if(numCats > 10) {
-    alert("You have a problem.")
-} else if(numCats > 4) {
-    alert("You have too many cats. Calm down.")
-}  else {
-    alert("We're friends")
-}
-
-for(let i = 1; i <= 10; i++) {
-    console.log(i)
-  }
-  
