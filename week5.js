@@ -59,9 +59,31 @@ if(pottyTrained && !sheds && ( likesSnuggles || likesFetch )) {
 
 
 
-if (CONDITION) {
-    // the code to run if the CONDITION is true
-} else { // NO CONDITION ON AN ELSE
-    // the condition must have not been true to get here
-    // code to run in the else case
+// if (CONDITION) {
+//     // the code to run if the CONDITION is true
+// } else { // NO CONDITION ON AN ELSE
+//     // the condition must have not been true to get here
+//     // code to run in the else case
+// }
+
+let i = 0
+while(i < 3) {
+    alert("Here's a cat!")
+    i++ // i = i + 1
 }
+alert("You have enough!")
+
+
+
+// What are my variables right now?
+// total = 15
+// i = 6
+
+
+let total = 0
+
+for(let i = 1; i <= 5; i++) {
+   total += i; // total = total + i
+}
+
+alert("The total is " + total)
