@@ -1,38 +1,8 @@
-
-
-let something = 3
-
-something = 4
-
-
-// what a variable is in the problem given
-
-
-/*
-fdsf
-
-fdsfds
-*/
-
-
-/**
- * 
- * fdsfds
- * 
- * fdsfd
- * fdsfd
- */
-
-
-let isSweet = false
-let hasDairy = true
-let isCooked = false
-let isHot = true
-
-
-isSweet && (hasDairy || isCooked && !isHot)
-
-
+let dogName
+let likesFetch
+let sheds
+let pottyTrained
+let likesSnuggles
 
 dogName = "Milo"
 likesFetch = true
@@ -41,10 +11,8 @@ pottyTrained = true
 likesSnuggles = true
 
 console.log("Should Rafael get Milo?")
-if(pottyTrained && !sheds && ( likesSnuggles || likesFetch )) {
-    alert("We found a dog for you! Its name is " + dogName)
-}
-
+let shouldGetDog = pottyTrained && !sheds && (likesFetch || likesSnuggles)
+console.log(shouldGetDog)
 
 dogName = "Penny"
 likesFetch = false
@@ -53,37 +21,50 @@ pottyTrained = true
 likesSnuggles = true
 
 console.log("Should Rafael get Penny?")
-if(pottyTrained && !sheds && ( likesSnuggles || likesFetch )) {
-    alert("We found a dog for you! Its name is " + dogName)
+console.log(pottyTrained && !sheds && (likesFetch || likesSnuggles))
+
+
+let guess = ""
+
+while(guess !== "pineapple") {
+    guess = prompt("Guess!")
 }
 
+// It will only get here if guess === "pineapple"
+alert("You guessed right!")
 
 
-// if (CONDITION) {
-//     // the code to run if the CONDITION is true
-// } else { // NO CONDITION ON AN ELSE
-//     // the condition must have not been true to get here
-//     // code to run in the else case
+// let numCats = 0
+// while(numCats < 3) {
+//     alert("Here's a cat!")
+//     numCats++ // i = i + 1
 // }
+// alert("You have enough!")
+// console.log(numCats)
 
-let i = 0
-while(i < 3) {
-    alert("Here's a cat!")
-    i++ // i = i + 1
-}
-alert("You have enough!")
+//for(let i = 0; i < AMOUNT TO LOOP; i++) {
+// WHAT YOU WANT TO DO OVER AND OVER AGAIN
+//}
 
-
-
-// What are my variables right now?
-// total = 15
+// Walk through scratchpad
+// total = 15 // 0 -> 1 -> 3 -> 6 -> 10 -> 15
 // i = 6
-
+// Logged out: 1 2 3 4 5
 
 let total = 0
+console.log(total) // 0
 
-for(let i = 1; i <= 5; i++) {
-   total += i; // total = total + i
+for (let i = 1; i <= 5; i++) {
+    console.log(total) // 0 1 3 6 10
+    total += i; // total = total + i
+    console.log(total) // 1 3 6 10 15
 }
+  
 
-alert("The total is " + total)
+console.log(total) // 15
+
+
+let numCats = prompt("How many cats do you want?")
+for(let i = 0; i < numCats + 2; i++) {
+    alert("here's a cat")
+}
