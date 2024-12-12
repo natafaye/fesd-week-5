@@ -1,70 +1,63 @@
-let dogName
-let likesFetch
-let sheds
-let pottyTrained
-let likesSnuggles
 
-dogName = "Milo"
-likesFetch = true
-sheds = true
-pottyTrained = true
-likesSnuggles = true
+// let total = 4 + 3 // 7
 
-console.log("Should Rafael get Milo?")
-let shouldGetDog = pottyTrained && !sheds && (likesFetch || likesSnuggles)
-console.log(shouldGetDog)
+// let message = "How are you " + "Natalie" // "How are you Natalie"
 
-dogName = "Penny"
-likesFetch = false
-sheds = false
-pottyTrained = true
-likesSnuggles = true
+// let isAvailable = true && false // false
 
-console.log("Should Rafael get Penny?")
-console.log(pottyTrained && !sheds && (likesFetch || likesSnuggles))
+// start on the right hand side of the equal sign
+// simplify that right hand side down to a value (string, number, boolean, null, undefined, etc)
+// That goes into the variable on the left hand side
 
 
+/*** THE GUESSING GAME  ***/
+let correctNumber = 4
+
+// Make guess and give it an empty string to start things out
 let guess = ""
 
-while(guess !== "pineapple") {
-    guess = prompt("Guess!")
+while(guess !== correctNumber) {
+    // a string of what the user typed in OR null
+    guess = prompt("Guess a number between 1 and 10")
+
+    // Potential bug: 4.xxxx is accepted
+    // some kind of if here to check if it's a decimal
+    // Sanitizing input = trying to stop users from breaking things
+
+    // turn guess into a number
+    guess = parseInt(guess)
+
+    if(guess > correctNumber + 5) {
+        alert("Your number was WAY too high, calm down")
+    } else if(guess > correctNumber) { // Javascript will be a little buggy if they're strings so they're numbers
+        alert("Your number was too high")
+    } else if(guess < correctNumber) {
+        alert("Your number was too low")
+    } else if(isNaN(guess)) {
+        alert("That wasn't even a number bro")
+    }
 }
 
-// It will only get here if guess === "pineapple"
-alert("You guessed right!")
+// If they get out of the while loop and make it down here
+// then guess must be the correct number because that's
+// the only way that guess !== correctNumber can be false
+alert("You did it! That's the number!") 
 
 
-// let numCats = 0
-// while(numCats < 3) {
-//     alert("Here's a cat!")
-//     numCats++ // i = i + 1
-// }
-// alert("You have enough!")
-// console.log(numCats)
 
-//for(let i = 0; i < AMOUNT TO LOOP; i++) {
-// WHAT YOU WANT TO DO OVER AND OVER AGAIN
-//}
 
-// Walk through scratchpad
-// total = 15 // 0 -> 1 -> 3 -> 6 -> 10 -> 15
-// i = 6
-// Logged out: 1 2 3 4 5
+/*** FOR LOOP PRACTICE ***/
 
 let total = 0
+
 console.log(total) // 0
 
-for (let i = 1; i <= 5; i++) {
-    console.log(total) // 0 1 3 6 10
-    total += i; // total = total + i
-    console.log(total) // 1 3 6 10 15
+for (let i = 0; i < 5; i++) {
+    console.log(total) // 0, 0, 1, 3, 6
+    total += i // total = total + i
+    console.log(total) // 0, 1, 3, 6, 10
 }
-  
 
-console.log(total) // 15
+console.log(total) // 10
 
-
-let numCats = prompt("How many cats do you want?")
-for(let i = 0; i < numCats + 2; i++) {
-    alert("here's a cat")
-}
+alert("The total is " + total)
