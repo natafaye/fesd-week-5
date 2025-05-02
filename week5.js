@@ -1,76 +1,106 @@
-// if is a magic word
-// if(SOMETHING THAT COMES OUT TO TRUE OR FALSE) {
-//     // code that we may or may not want to run
-// }
-// else { <---- else does NOT get a condition with curly brackets
+let dogName
+let likesFetch
+let sheds
+let pottyTrained
+let likesSnuggles
 
-// }
+// Rafael's preferences
+// He wants it to be potty trained
+// He doesn’t want it to shed
+// He wants it to like to snuggle or like to play fetch (or both)
 
-// prompt("message") will simplify to whatever the user types in (or null)
-// It will always be a string, even if they type in a number
+// Puzzle Pieces
+// && || ! ()
+// likesFetch sheds pottyTrained likesSnuggles
 
-// let numCats = prompt("How many cats do you have")
-// // Shame or praise based on number of cats they have
-// if (numCats < 3) {
-//     alert("How rude of you, there are cats without homes 👀")
-// }
-// else if (numCats > 10) {
-//     alert("I need to make a call real quick 🤨")
-// }
-// else if (numCats > 5) { // && numCats <= 10
-//     alert("I have some questions")
-// }
-// else { // automatically says if every other check was false
-//     // else if(numCats >= 3 && numCats <= 5) {
-//     // It will only come inside this else, if they have 3 or 4 or 5 cats (or cancel or something weird)
-//     alert("You are correct and the greatest 👑")
-// }
+// Milo
+dogName = "Milo"
+likesFetch = true
+sheds = true
+pottyTrained = true
+likesSnuggles = true
 
+let rafaelShouldGetMilo = pottyTrained && !sheds && (likesFetch || likesSnuggles)
 
-// while is a magic word
-// repeat steps 3 through 5 until finished
-// while(SOMETHING THAT COMES OUT TO TRUE OR FALSE ISH) {
-//     // the code we want to run as long as it is true
-// }
+// Penny
+dogName = "Penny"
+likesFetch = false
+sheds = false
+pottyTrained = true
+likesSnuggles = true
+
+let rafaelShouldGetPenny = pottyTrained && !sheds && (likesFetch || likesSnuggles)
+
+console.log("Get milo?", rafaelShouldGetMilo)
+console.log("Get penny?", rafaelShouldGetPenny)
 
 
 
-// I highly recommend practice reading loops like you're a computer
-// it'll really build your ability to write them and debug them
+let age = 40
+let country = "USA"
+let money = 1
 
-// pretending to be the computer
+let canBuyBeer = (age >= 21 || country === "Germany") && money >= 4.99
+// false
+
+
+let smoking = prompt("Do you smoke?")
+let chocolate = prompt("Do you eat chocolate in bed?")
+let rich = prompt("Are you rich?")
+let smart = prompt("Are you smart?")
+let splurger = prompt("Do you buy crap you don't need?")
+// These variables will have "y" or "n"
+
+// Requirements for Bob
+
+// Harder deal breaker: not smoking, 
+// Harder deal breaker: Not a splurger unless you're rich
+if(smoking === "y" || (splurger === "y" && rich === "n")) {
+    alert("No thank you!")
+}
+// Soft deal breaker: Smart or rich
+// Soft deal breaker: not chocolate
+else if((smart === "n" && rich === "n") || chocolate === "y") {
+    alert("Tell me more, but you're on thin ice")
+}
+else {
+    alert("Marry me baby!")
+}
+
+
+// Practicing "reading" loops helps you write them correctly and debug them when they're not correct
+
+
+
+
+let i = 0
+while(i < 3) {
+    alert("Here's a cat!")
+    i++ // i = i + 1
+}
+alert("You have enough!")
+
+
+
 // i = 3
-// cat alert, cat alert, cat alert
+// here's a cat, here's a cat, here's a cat, you have enough
 
-// option 1
-// let i = 0
-// while(i < 3) {
-//     alert("Here's a cat!")
-//     i++ // i = i + 1
-// }
-
-// option 2
-// for(let i = 0; i < 3; i++) {
-//     alert("Here's a cat!")
-// }
-
-// alert("You have enough!")
-// alert("i is " + i)
+for(let i = 0; i < 3; i++) {
+    alert("Here's a cat!")
+}
+alert("You have enough!")
 
 
-// pretending the computer
-// console: 1, 2, 3, 4, 5
 // total = 15
 // i = 6
 
 let total = 0
-
-for (let i = 1; i <= 10; i++) {
-    if (i % 2 === 0) {
-        total += i; // total = total + i
-    }
+console.log(total) // 0
+for(let i = 1; i <= 5; i++) {
+   console.log(total) // 0, 1, 3, 6, 10
+   total += i; // total = total + i
+   console.log(total) // 1, 3, 6, 10, 15
 }
+console.log(total) // 15
 
 alert("The total is " + total)
-
-// number % 2 === 0
