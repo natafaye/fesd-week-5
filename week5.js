@@ -1,106 +1,73 @@
-let dogName
-let likesFetch
-let sheds
-let pottyTrained
-let likesSnuggles
 
-// Rafael's preferences
-// He wants it to be potty trained
-// He doesn’t want it to shed
-// He wants it to like to snuggle or like to play fetch (or both)
+// let userAnswer = prompt("What's your favorite food? 🍕 or 🍦 or 🍝")
 
-// Puzzle Pieces
-// && || ! ()
-// likesFetch sheds pottyTrained likesSnuggles
+// if(userAnswer === "🍕") {
+//     alert("Correct answer!")
+// } else {
+//     alert("What is wrong with you")
+// }
 
-// Milo
-dogName = "Milo"
-likesFetch = true
-sheds = true
-pottyTrained = true
-likesSnuggles = true
 
-let rafaelShouldGetMilo = pottyTrained && !sheds && (likesFetch || likesSnuggles)
+// let numberOfFriends = prompt("How many friends are coming to the party?")
 
-// Penny
-dogName = "Penny"
-likesFetch = false
-sheds = false
-pottyTrained = true
-likesSnuggles = true
+// // 200
+// // Whoa calm down
 
-let rafaelShouldGetPenny = pottyTrained && !sheds && (likesFetch || likesSnuggles)
-
-console.log("Get milo?", rafaelShouldGetMilo)
-console.log("Get penny?", rafaelShouldGetPenny)
+// // if friends is less than 3 then say how sad
+// if(numberOfFriends < 3) { // 0 - 2
+//     alert("how sad")
+// }
+// else if(numberOfFriends > 20) { // 21 - infinity
+//     alert("Whoa calm down")
+// }
+// // It can't get here without numberOfFriends being LESS OR EQUAL to 20
+// else if(numberOfFriends > 5) { // 6 - 20      && numberOfFriends <= 20
+//     alert("Perfect")
+// }
+// else { // 3, 4, 5
+//     alert("That's fine")
+// }
 
 
 
-let age = 40
-let country = "USA"
-let money = 1
+// let numberOfFriends = 0 //prompt("How many friends are here right now?")
+// while(numberOfFriends < 10) {
+//     console.log("New arrival coming! Right now there are " + numberOfFriends + " friends")
+//     numberOfFriends++
+// }
 
-let canBuyBeer = (age >= 21 || country === "Germany") && money >= 4.99
-// false
+// for(let numberOfFriends = 0; numberOfFriends < 10; numberOfFriends++) {
+//     console.log("New arrival coming! Right now there are " + numberOfFriends + " friends")
+// }
 
 
-let smoking = prompt("Do you smoke?")
-let chocolate = prompt("Do you eat chocolate in bed?")
-let rich = prompt("Are you rich?")
-let smart = prompt("Are you smart?")
-let splurger = prompt("Do you buy crap you don't need?")
-// These variables will have "y" or "n"
+// for(let i = 0; i < 10; i++) {
+//     console.log("New arrival coming! Right now there are " + i + " friends")
+// }
 
-// Requirements for Bob
 
-// Harder deal breaker: not smoking, 
-// Harder deal breaker: Not a splurger unless you're rich
-if(smoking === "y" || (splurger === "y" && rich === "n")) {
-    alert("No thank you!")
-}
-// Soft deal breaker: Smart or rich
-// Soft deal breaker: not chocolate
-else if((smart === "n" && rich === "n") || chocolate === "y") {
-    alert("Tell me more, but you're on thin ice")
-}
-else {
-    alert("Marry me baby!")
+let partyLimit = prompt("How many people max can come to the party?")
+
+for (let i = 0; i < partyLimit; i++) {
+    console.log("New arrival coming! Right now there are " + i + " friends")
 }
 
 
-// Practicing "reading" loops helps you write them correctly and debug them when they're not correct
 
-
-
-
-let i = 0
-while(i < 3) {
-    alert("Here's a cat!")
-    i++ // i = i + 1
-}
-alert("You have enough!")
-
-
-
-// i = 3
-// here's a cat, here's a cat, here's a cat, you have enough
-
-for(let i = 0; i < 3; i++) {
-    alert("Here's a cat!")
-}
-alert("You have enough!")
-
-
-// total = 15
-// i = 6
+// Loops
+// Learning to read them so that you can write and debug them
+// Make sure you ask yourself what should be IN the loop and what should OUTSIDE the loop
 
 let total = 0
-console.log(total) // 0
-for(let i = 1; i <= 5; i++) {
-   console.log(total) // 0, 1, 3, 6, 10
-   total += i; // total = total + i
-   console.log(total) // 1, 3, 6, 10, 15
+
+console.log(total) // CONSOLE: 0
+
+for (let i = 1; i <= 5; i++) {
+    console.log(total) // CONSOLE: 0, 1, 3, 6, 10
+    total += i;
+    console.log(total) // CONSOLE:    1, 3, 6, 10, 15
 }
-console.log(total) // 15
+
+console.log(total) // CONSOLE: 15
 
 alert("The total is " + total)
